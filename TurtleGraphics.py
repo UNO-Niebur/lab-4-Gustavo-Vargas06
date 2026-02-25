@@ -14,8 +14,18 @@ def drawSquare(myTurtle, size):
 
 def main():
     myTurtle = turtle.Turtle()
+    myTurtle.penup()
+    myTurtle.goto(-50, 100)
+    myTurtle.pendown()
+    def drawpoly(myTurtle, sides):
+        angle = 360 / sides
+        for i in range(sides):
+            myTurtle.forward(50)
+            myTurtle.right(angle)
     # drawPolygon(myTurtle, 5) #draws a pentagon
+    drawPolygon(myTurtle, 5)
     # drawPolygon(myTurtle, 8) #draws an octogon
+    drawPolygon(myTurtle, 8)
 
     # fillCorner(myTurtle, 2) #draws a square with top right corner filled in.
     # fillCorner(myTurtle, 3) #draws a square bottom left corner filled in.
